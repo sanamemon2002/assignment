@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="password">Enter Password:
+        <input type="password" name="" id="password">
+    </div>
+    <div class="showpassword">
+        <input type="checkbox" name="" id="sp">
+        show password
+    </div>
+    <script>
+        let sp = document.getElementById("sp")
+        let password = document.getElementById("password")
+        sp.onclick = function () {
+            if (password.type == "password") {
+                password.type = "text"
+            } else {
+                password.type = "password"
+            }
+        }
+    </script>
+</body>
+</html>

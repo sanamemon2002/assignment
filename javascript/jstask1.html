@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+        font-size: 22px;
+        margin-top: 40px;
+      }
+      .third{
+        font-size: 22px;
+        margin-top: 40px;
+      }
+      input[type=button]{
+        font-size: 20px;
+        width: 60px;
+        height: 35px;
+        margin-top: 40px;
+      }
+      .last{
+        font-size: 22px;
+      }
+    </style>
+</head>
+<body>
+    <div align="center"><h1>Maths Operations</h1></div>
+    <form name="myform" align="center">
+        <div class="first">Enter 1st number:
+      <input type="text" name="f1" id=""><br></div>
+      <div class="third">Enter 2nd number:
+      <input type="text" name="f2" id=""><br></div>
+      <input type="button" name="" id="" value="+" onclick="add()">
+      <input type="button" name="" id="" value="-" onclick="sub()">
+      <input type="button" name="" id="" value="*" onclick="mul()">
+      <input type="button" name="" id="" value="/" onclick="div()">
+      <input type="button" name="" id="" value="%"onclick="per()">
+      <div class="last" >Answer is:<input type="button" name="result" id=""></div>
+    </form>
+    <script>
+        function add() {
+            f1=parseInt(myform.f1.value)
+            f2=parseInt(myform.f2.value)
+            result=f1+f2
+            myform.result.value=result
+        }
+        function sub() {
+            f1=parseInt(myform.f1.value)
+            f2=parseInt(myform.f2.value)
+            result=f1-f2
+            myform.result.value=result
+        }
+        function mul() {
+            f1=parseInt(myform.f1.value)
+            f2=parseInt(myform.f2.value)
+            result=f1*f2
+            myform.result.value=result
+        }
+        function div() {
+            f1=parseInt(myform.f1.value)
+            f2=parseInt(myform.f2.value)
+            result=f1/f2
+            myform.result.value=result
+        }
+        function per() {
+            f1=parseInt(myform.f1.value)
+            f2=parseInt(myform.f2.value)
+            result=f1%f2
+            myform.result.value=result
+        }
+    </script>
+</body>
+</html>
