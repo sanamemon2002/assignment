@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        input, button {
+            font-size: 16px;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Calculator</h1>
+    <p>Enter two numbers and select an operation:</p>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <button onclick="divideNumbers()">Divide</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function divideNumbers() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const resultElement = document.getElementById("result");
+
+            try {
+                if (isNaN(num1) || isNaN(num2)) {
+                    throw new Error("Both inputs must be valid numbers.");
+                }
+                if (num2 === 0) {
+                    throw new Error("Division by zero is not allowed.");
+                }
+
+                const result = num1 / num2;
+                resultElement.textContent = `Result: ${result}`;
+                resultElement.style.color = "green"; 
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+                resultElement.style.color = "red"; 
+            }
+        }
+    </script>
+</body>
+</html>
